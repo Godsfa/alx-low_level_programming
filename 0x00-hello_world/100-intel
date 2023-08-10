@@ -1,7 +1,2 @@
 #!/bin/bash
-# Get the C file name from the variable
-C_FILE="$CFILE"
-# Extract the file name without the extension
-BASE_NAME=$(basename "$C_FILE" .c)
-# Generate the assembly code with Intel syntax and save it in an output file
-gcc -S -masm=intel "$C_FILE" -o "$BASE_NAME".s
+gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
