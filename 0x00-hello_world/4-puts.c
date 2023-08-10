@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main - prints out some string
- * Return: 0 on success
+ * main - Emtry point of the program
+ *
+ * Return: Always 0 on success
  */
 int main(void)
 {
