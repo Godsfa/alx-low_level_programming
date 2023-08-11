@@ -11,10 +11,11 @@
  */
 int main(void)
 {
-unsigned int n;
+int n;
+
 srand(time(0));
-n = rand() % (RAND_MAX + 1);
-printf("The number %u is ", n);
+n = rand() - RAND_MAX / 2;
+printf("%d is ", n);
 if (n > 0)
 {
 printf("positive");
