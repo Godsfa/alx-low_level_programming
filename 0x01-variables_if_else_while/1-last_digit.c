@@ -4,7 +4,7 @@
 /**
  * main - Entry point of the program
  *
- * Description: This program generates a random number and prints the last digit of the number along with its properties.
+ * Description: This program generates a random number
  *
  * Return: Always 0 (Success)
  */
