@@ -17,15 +17,15 @@ for (column = 0; column <= n; column++)
 {
 product = row * column;
 
-if (column != 0)
-printf(",   ");
+if (column > 0){
+printf(", ");
 if (product < 10)
-printf("   ");
-else if (product >= 10 && product < 100)
-printf("  ");
+printf(" ");
+if (product >= 10 && product < 100)
+printf(" ");
 else
 printf(" ");
-                
+}
 printf("%d", product);
 }
 printf("\n");
