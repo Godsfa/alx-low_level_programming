@@ -12,7 +12,6 @@ int main(void)
 
     printf("%lu, %lu", a, b);
 
-    /* First loop for the first 90 Fibonacci numbers */
     for (i = 3; i <= 90; i++)
     {
         next = a + b;
@@ -21,7 +20,6 @@ int main(void)
         b = next;
     }
 
-    /* Second loop for the remaining 8 Fibonacci numbers */
     for (i = 91; i <= 98; i++)
     {
         next = a + b;
