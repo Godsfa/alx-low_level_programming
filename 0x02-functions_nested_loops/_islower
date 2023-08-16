@@ -1,0 +1,21 @@
+#include "main.h"
+#include <stdio.h> // For standard I/O functions
+
+int main(void)
+{
+    int result;
+
+    result = _islower('a');
+    printf("_islower('a') = %d\n", result); // This should print 1
+
+    result = _islower('A');
+    printf("_islower('A') = %d\n", result); // This should print 0
+
+    result = _islower('z');
+    printf("_islower('z') = %d\n", result); // This should print 1
+
+    result = _islower('Z');
+    printf("_islower('Z') = %d\n", result); // This should print 0
+
+    return 0;
+}
