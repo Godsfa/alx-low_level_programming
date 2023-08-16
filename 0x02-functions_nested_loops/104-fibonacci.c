@@ -1,31 +1,21 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
 int main(void)
 {
-    int i;
+    int count = 0;
     unsigned long int a = 1, b = 2, next;
 
     printf("%lu, %lu", a, b);
+    count += 2;
 
-    for (i = 3; i <= 90; i++)
+    /* Loop to generate the first 98 Fibonacci numbers */
+    while (count < 98)
     {
         next = a + b;
         printf(", %lu", next);
         a = b;
         b = next;
-    }
-
-    for (i = 91; i <= 98; i++)
-    {
-        next = a + b;
-        printf(", %lu", next);
-        a = b;
-        b = next;
+        count++;
     }
 
     printf("\n");
