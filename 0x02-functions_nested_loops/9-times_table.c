@@ -15,11 +15,11 @@ for (column = 0; column <= 9; column++)
 product = row * column;
 
 if (column != 0)
-printf(",");
+printf(", ");
 if (product < 10)
-printf(" ");
+printf("  ");
 else if (product >= 10 && product < 100)
-printf(" "); 
+printf("  "); 
 printf("%d", product);
 }
 printf("\n");
