@@ -23,7 +23,7 @@ printf(", ");
 if (product < 10)
 printf(" ");
 if (product >= 10 && product < 100)
-printf("  ");
+printf(" ");
 else
 printf(" ");
 }
