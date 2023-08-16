@@ -15,7 +15,6 @@ while (1)
 next = first + second;
 if (next > 4000000)
 break;
-        
 if (next % 2 == 0)
 sum += next;
 
@@ -24,5 +23,5 @@ second = next;
 }
 
 printf("%ld\n", sum);
-return 0;
+return (0);
 }
