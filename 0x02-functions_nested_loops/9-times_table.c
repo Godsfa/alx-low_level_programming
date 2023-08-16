@@ -16,10 +16,10 @@ product = row * column;
 if (column != 0)
 printf(", ");
 if (product < 10 && column != 0)
-printf("   ");
+printf(" ");
 else if (product >= 10 && column != 0)
 
-printf("  ");
+printf(" ");
 
 printf("%d", product);
 }
