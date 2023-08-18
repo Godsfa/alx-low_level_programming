@@ -3,10 +3,10 @@
 
 /**
  * largest_prime_factor - Finds the largest prime factor of a number
- * main - Entry point of the program
+ *
  * @n: The number
  *
- * Return: Always 0 (Success)
+ * Return: returns factor on (Success)
  */
 long largest_prime_factor(long n)
 {
@@ -27,12 +27,16 @@ long largest_prime_factor(long n)
 	return (factor);
 }
 
+/**
+ * main - execution start from here
+ *
+ * Return: return 0 on seccess
+ */
 int main(void)
 {
 	long num = 612852475143;
 	long result = largest_prime_factor(num);
 
 	printf("%ld\n", result);
-
 	return (0);
 }
