@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,17 +7,18 @@
  */
 void print_number(int n)
 {
+	unsigned int integer = n;
+
 	if (n < 0)
 	{
 		putchar('-');
-		n = -n;
+		integer = -integer;
 	}
 
-	if (n / 10 != 0)
+	if ((integer / 10) > 0)
 	{
-		print_number(n / 10);
+		print_number(integer / 10);
 	}
 
-	putchar((n % 10) + '0');
+	putchar((integer % 10) + '0');
 }
-
