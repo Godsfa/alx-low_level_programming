@@ -1,15 +1,10 @@
 #include <stdio.h>
 
-/* Function prototype */
-void reset_to_98(int *n);
-
-int main(void)
+/**
+ * reset_to_98 - Updates the value pointed to by n to 98.
+ * @n: A pointer to an int.
+ */
+void reset_to_98(int *n)
 {
-    int num = 402;
-
-    printf("Before reset: %d\n", num);
-    reset_to_98(&num);
-    printf("After reset: %d\n", num);
-
-    return 0;
+	*n = 98;
 }
