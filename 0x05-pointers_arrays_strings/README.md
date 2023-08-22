@@ -1,1 +1,0 @@
-directory to learn C - Pointers, arrays and strings;
