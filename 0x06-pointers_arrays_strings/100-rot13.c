@@ -11,9 +11,13 @@ char *rot13(char *s)
 	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *rot13letters = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (int i = 0; s[i] != '\0'; i++)
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (int j = 0; letters[j] != '\0'; j++)
+		int j;
+
+		for (j = 0; letters[j] != '\0'; j++)
 		{
 			if (s[i] == letters[j])
 			{

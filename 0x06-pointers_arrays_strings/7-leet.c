@@ -10,10 +10,13 @@ char *leet(char *s)
 {
 	char *letters = "AEOTL";
 	char *numbers = "43071";
+	int i;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (int j = 0; letters[j] != '\0'; j++)
+		int j;
+
+		for (j = 0; letters[j] != '\0'; j++)
 		{
 			if (s[i] == letters[j] || s[i] == letters[j] + 32)
 			{

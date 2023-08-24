@@ -1,36 +1,35 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
- * cap_string - Capitalizes all words in a string
- * @s: The input string
- *
- * Return: Pointer to the modified string
+ * cap_string - Capitalizes all words of a string.
+ * @s: The input string.
+ * Return: Pointer to the modified string.
  */
 char *cap_string(char *s)
 {
-	bool new_word = true;
+	int i;
+	int capitalize = 1;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
 				s[i] == ',' || s[i] == ';' || s[i] == '.' ||
 				s[i] == '!' || s[i] == '?' || s[i] == '"' ||
-				s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
+				s[i] == '(' || s[i] == ')' || s[i] == '{' ||
+				s[i] == '}')
 		{
-			new_word = true;
+			capitalize = 1;
 		}
-		else if (new_word && s[i] >= 'a' && s[i] <= 'z')
+		else if (capitalize && s[i] >= 'a' && s[i] <= 'z')
 		{
-			s[i] -= 'a' - 'A';
-			new_word = false;
+			s[i] -= 32;
+			capitalize = 0;
 		}
 		else
 		{
-			new_word = false;
+			capitalize = 0;
 		}
 	}
 
 	return (s);
 }
-
