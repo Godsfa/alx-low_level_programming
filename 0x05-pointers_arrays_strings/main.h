@@ -3,7 +3,6 @@
 
 void reset_to_98(int *n);
 
-<<<<<<< HEAD
 void swap_int(int *a, int *b);
 
 int _strlen(char *s);
@@ -25,6 +24,3 @@ char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
 
 #endif /* MAIN_H */
-=======
-#endif /* MAIN_H */                      
->>>>>>> 71f26f881aaefe48553f15d2c7e24bef12ac7475
