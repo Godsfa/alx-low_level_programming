@@ -30,5 +30,5 @@ return (start); /* Found the substring */
 haystack = start + 1;
 }
 
-return NULL; /* Substring not found */
+return (NULL); /* Substring not found */
 }

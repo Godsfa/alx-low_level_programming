@@ -14,15 +14,15 @@ while (*s != '\0')
 {
 if (*s == c)
 {
- return (s);
+return (s);
 }
 s++;
 }
 
 if (c == '\0')
 {
-return (s); 
+return (s);
 }
 
-return NULL;
+return (NULL);
 }

@@ -21,5 +21,5 @@ return (s); /* Found a matching byte */
 s++;
 }
 
-return NULL; /* No matching byte found */
+return (NULL); /* No matching byte found */
 }
