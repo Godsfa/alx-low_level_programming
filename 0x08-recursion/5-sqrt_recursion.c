@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* sqrt_recursive_helper - Helper function for calculating the square root recursively
+* sqrt_recursive_helper - Helper function for
 * @n: The number for which to calculate the square root
 * @start: The starting point of the search range
 * @end: The ending point of the search range
@@ -16,10 +16,10 @@ if (start <= end)
 {
 mid = start + (end - start) / 2;
 
-if (mid * mid == n)
+if (mid *mid == n)
 return (mid);
 
-if (mid * mid > n)
+if (mid *mid > n)
 return (sqrt_recursive_helper(n, start, mid - 1));
 
 return (sqrt_recursive_helper(n, mid + 1, end));
