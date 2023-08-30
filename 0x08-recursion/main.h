@@ -19,4 +19,10 @@ int is_palindrome(char *s);
 
 int wildcmp(char *s1, char *s2);
 
+
+int is_palindrome(char *s);
+int _strlen(char *s);
+int is_alpha_numeric(char c);
+char to_lower(char c);
+
 #endif /* MAIN_H */

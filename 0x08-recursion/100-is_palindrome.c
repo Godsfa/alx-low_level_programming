@@ -1,50 +1,79 @@
 #include "main.h"
 
-int _strlen_recursion(char *s);
-int check_palindrome(char *s, int start, int end);
+int _strlen(char *s);
+int is_alpha_numeric(char c);
+char to_lower(char c);
 
 /**
-* is_palindrome - Checks if a string is a palindrome.
-* @s: The string to be checked.
-*
-* Return: 1 if the string is a palindrome, 0 otherwise.
-*/
-int is_palinrome(char *s)
+ * is_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: 1 if the string is a palindrome, 0 otherwise.
+ */
+int is_palindrome(char *s)
 {
-int length = _strlen_recursion(s);
+    int len = _strlen(s);
+    int i, j;
 
-return (check_palindrome(s, 0, length - 1));
+    if (len <= 1)
+        return 1;
+    i = 0;
+    j = len - 1;
+
+    while (i < j)
+    {
+        while (!is_alpha_numeric(s[i]))
+            i++;
+        while (!is_alpha_numeric(s[j]))
+            j--;
+
+        if (i < j && to_lower(s[i]) != to_lower(s[j]))
+            return 0;
+
+        i++;
+        j--;
+    }
+
+    return 1;
 }
 
 /**
-* _strlen_recursion - Calculates the length of a string recursively.
-* @s: The string.
-*
-* Return: The length of the string.
-*/
-int _strlen_recursion(char *s)
+ * _strlen - Calculates the length of a string.
+ * @s: The string.
+ *
+ * Return: The length of the string.
+ */
+int _strlen(char *s)
 {
-if (*s == '\0')
-return (0);
-
-return (1 + _strlen_recursion(s + 1));
+    int len = 0;
+    while (*s)
+    {
+        len++;
+        s++;
+    }
+    return len;
 }
 
 /**
-* check_palindrome - Helper function to check if a string is a palindrome.
-* @s: The string to be checked.
-* @start: The starting index.
-* @end: The ending index.
-*
-* Return: 1 if the substring is a palindrome, 0 otherwise.
-*/
-int check_palindrome(char *s, int start, int end)
+ * is_alpha_numeric - Checks if a character is alphanumeric.
+ * @c: The character to be checked.
+ *
+ * Return: 1 if the character is alphanumeric, 0 otherwise.
+ */
+int is_alpha_numeric(char c)
 {
-if (start >= end)
-return (1);
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+}
 
-if (s[start] != s[end])
-return (0);
-
-return (check_palindrome(s, start + 1, end - 1));
+/**
+ * to_lower - Converts a character to lowercase.
+ * @c: The character to be converted.
+ *
+ * Return: The lowercase character.
+ */
+char to_lower(char c)
+{
+    if (c >= 'A' && c <= 'Z')
+        return c + 32;
+    return c;
 }
