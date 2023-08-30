@@ -14,5 +14,5 @@ if (*s == '\0')
 return (0); /* Base case, end of string reached.*/
 }
 
-return 1 + _strlen_recursion(s + 1);
+return (1 + _strlen_recursion(s + 1));
 }
