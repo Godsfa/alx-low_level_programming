@@ -3,6 +3,9 @@
 /**
 * is_space - Checks if a character is a space.
 * @c: The character to check.
+*@count_words: the counter.
+*
+* @strtow: the fuction.
 *
 * Return: 1 if it's a space, 0 otherwise.
 */
@@ -22,7 +25,8 @@ while (*str)
 if (is_space(*str))
 {
 in_word = 0;
-} else if (!in_word)
+}
+else if (!in_word)
 {
 in_word = 1;
 count++;
@@ -49,11 +53,13 @@ return (NULL);
 
 words_start = words;
 
-while (*str) {
+while (*str)
+{
 if (is_space(*str))
 {
 in_word = 0;
-} else if (!in_word)
+}
+else if (!in_word)
 {
 in_word = 1;
 *words = str;
