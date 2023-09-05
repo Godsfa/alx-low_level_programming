@@ -7,18 +7,23 @@
 * Return: 1 if it's a space, 0 otherwise.
 */
 
-int is_space(char c) {
+int is_space(char c)
+{
 return (c == ' ' || c == '\t' || c == '\n');
 }
 
-int count_words(char *str) {
+int count_words(char *str)
+{
 int in_word = 0;
 int count = 0;
 
-while (*str) {
-if (is_space(*str)) {
-   in_word = 0;
-} else if (!in_word) {
+while (*str)
+{
+if (is_space(*str))
+{
+in_word = 0;
+} else if (!in_word)
+{
 in_word = 1;
 count++;
 }
@@ -28,7 +33,8 @@ str++;
 return (count);
 }
 
-char **strtow(char *str) {
+char **strtow(char *str)
+{
 int num_words = count_words(str);
 char **words;
 char **words_start;
@@ -39,14 +45,16 @@ return (NULL);
 
 words = (char **)malloc((num_words + 1) * sizeof(char *));
 if (words == NULL)
-    return (NULL);
+return (NULL);
 
 words_start = words;
 
 while (*str) {
-if (is_space(*str)) {
+if (is_space(*str))
+{
 in_word = 0;
-} else if (!in_word) {
+} else if (!in_word)
+{
 in_word = 1;
 *words = str;
 words++;
