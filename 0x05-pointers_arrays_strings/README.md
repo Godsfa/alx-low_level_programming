@@ -1,1 +1,1 @@
-README.md file for the 0x05-pointers_arrays_strings program
+README.md file for more pointer and array point
