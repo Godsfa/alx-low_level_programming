@@ -13,7 +13,7 @@ listint_t *current, *next;
 size_t count = 0;
 
 if (h == NULL || *h == NULL)
-return 0;
+return (0);
 
 current = *h;
 

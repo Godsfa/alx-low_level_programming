@@ -14,7 +14,7 @@ listint_t *temp;
 int data;
 
 if (*head == NULL)
-return 0; /*If the list is empty, return 0*/
+return (0); /*If the list is empty, return 0*/
 
 temp = *head; /*Store the current head node*/
 data = temp->n; /*Get the data (n) from the head node*/

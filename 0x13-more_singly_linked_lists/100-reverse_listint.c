@@ -23,7 +23,7 @@ prev = current; /* Move prev to the current node */
 current = next_node; /* Move current to the next node */
 }
 
-*head = prev; /* Update the head to point to the new first node (previously the last node) */
+*head = prev; /* Update the head to point to th*/
 
 return (*head);
 }

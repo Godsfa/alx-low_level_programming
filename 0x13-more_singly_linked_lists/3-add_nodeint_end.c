@@ -16,7 +16,7 @@ listint_t *new_node, *temp;
 new_node = malloc(sizeof(listint_t)); /*Allocate memory for the new node*/
 
 if (new_node == NULL)
-return NULL; /*Memory allocation failed*/
+return (NULL); /*Memory allocation failed*/
 
 new_node->n = n;   /*Assign the value n to the new node's n member*/
 new_node->next = NULL; /*Set the new node's next to NULL (it's the last node)*/
@@ -35,5 +35,5 @@ temp = temp->next; /*Traverse to the last node*/
 temp->next = new_node; /*Attach the new node to the last node*/
 }
 
-return new_node; /* Return the address of the new element*/
+return (new_node); /* Return the address of the new element*/
 }

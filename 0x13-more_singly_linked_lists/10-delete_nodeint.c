@@ -3,7 +3,7 @@
 #include "lists.h"  /* Include the header file where listint_t is defined */
 
 /**
-* delete_nodeint_at_index - Deletes the node at a given position in a listint_t list.
+* delete_nodeint_at_index - Deletes the node at a given
 * @head: A pointer to a pointer to the head of the list.
 * @index: The index of the node to be deleted (starting at 0).
 *
@@ -15,7 +15,7 @@ listint_t *current, *temp;
 unsigned int i = 0;
 
 if (*head == NULL)
-return -1; /* List is empty, deletion failed */
+return (-1); /* List is empty, deletion failed */
 
 current = *head;
 
@@ -23,7 +23,7 @@ if (index == 0)
 {
 *head = (*head)->next; /* Update the head to the next node */
 free(current); /* Free the old head node */
-return 1; /* Deletion succeeded */
+return (1); /* Deletion succeeded */
 }
 
 while (current != NULL && i < index - 1)
@@ -33,11 +33,11 @@ i++;
 }
 
 if (current == NULL || current->next == NULL)
-return -1; /* Index out of bounds, deletion failed */
+return (-1); /* Index out of bounds, deletion failed */
 
 temp = current->next; /* Store the node to be deleted */
 current->next = temp->next; /* Update the previous node's next pointer */
 free(temp); /* Free the deleted node */
 
-return 1; /* Deletion succeeded */
+return (1); /* Deletion succeeded */
 }

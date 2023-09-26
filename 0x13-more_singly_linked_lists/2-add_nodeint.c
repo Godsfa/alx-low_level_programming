@@ -17,7 +17,7 @@ listint_t *new_node;
 new_node = malloc(sizeof(listint_t)); /* Allocate memory for the new node*/
 
 if (new_node == NULL)
-return NULL; /*Memory allocation failed*/
+return (NULL); /*Memory allocation failed*/
 
 new_node->n = n;    /* Assign the value n to the new node's n member*/
 new_node->next = *head; /* Point the new node to the current head*/

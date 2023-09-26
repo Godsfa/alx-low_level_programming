@@ -15,10 +15,10 @@ unsigned int i = 0;
 while (head != NULL)
 {
 if (i == index)
-return head;
+return (head);
 head = head->next;
 i++;
 }
 
-return NULL;
+return (NULL);
 }
